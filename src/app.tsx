@@ -1,11 +1,7 @@
-import * as React from 'react';
+import * as React from 'react'
 
-const App : React.FC= () =>{
-    return(
-        <React.Fragment>
-            Work
-        </React.Fragment>
-    )
+const App = () => {
+  return <React.Fragment>Lint Test</React.Fragment>
 }
 
-export default App;
+export default App
