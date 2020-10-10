@@ -27,8 +27,21 @@ module.exports = {
     module : {
         rules : [
             {
-                test : /\.(ts|tsx)?$/,
-                loader : 'ts-loader'
+                test: /\.(js|jsx|ts|tsx)$/,
+                exclude: /(node_modules)/,
+                use: {
+                  loader: 'babel-loader',
+                  options: {
+                    presets: [
+                      '@babel/preset-env',
+                      '@babel/preset-typescript'
+                    ],
+                    plugins: [
+                      '@babel/proposal-class-properties',
+                      '@babel/proposal-object-rest-spread'
+                    ]
+                  }
+                }
             },
             {
                 test : /\.(sa|sc|c)ss$/,
